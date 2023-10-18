@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class three</title>
+</head>
+<body>
+<h1 id="head">Electricity Bill</h1>
+<h2 class="top">water BIil </h2>
+<button id="btn" onmouseover = "btnHover()" onmouseout = "btnout()" onclick ="bblock()">click</button>
+
+<!-- dom effect -->
+<script>
+
+document.getElementById("head").style.color="green";
+document.getElementById("head").style.background="orange";
+document.getElementById("head").style.padding="30px";
+document.getElementById("head").innerHTML = "green"; 
+
+var main = document.getElementById ("head");
+var second =document.getElementsByClassName("top");
+
+second [0].innerHTML = "shikba";
+
+
+document.getElementById("btn").style.color="blue";
+document.getElementById("btn").style.background="green";
+document.getElementById("btn").style.padding="10px 40px ";
+document.getElementById("head").style.display="none";
+
+
+var btnh = document.getElementById("btn");
+var shead = document.getElementById("head");
+
+function btnHover(){
+  btnh .style.background="blue";
+  btnh .style.color="green";
+  btnh .innerHTML ="download";
+}
+function btnout(){
+  btnh .style.background="green";
+  btnh .style.color="blue";
+  btnh .innerHTML ="download now";
+}
+function bblock(){
+ shead.style.display ="block"; 
+}
+
+
+
+
+
+
+      // bill
+
+      var unit =153;
+   var subtotal=0;
+
+   if(unit <=50){
+    subtotal= unit*0.50;
+   }
+
+ else if(unit > 50 && unit <=150){
+          subtotal = 50*0.50 +(unit-50)*0.75;
+ }
+
+ else if(unit > 150 && unit <= 250){
+          subtotal = 50*0.50 + 100*0.75 +(unit-150)*1.20;
+ }
+
+else if (unit > 250){
+  subtotal = 50*0.50 + 100*0.75 + 100*1.20 +(unit-250)*1.50;
+
+}
+
+var vat = subtotal*0.20;
+var total = subtotal + vat;
+
+document.write(total+"<br>");
+
+
+
+
+
+
+
+
+
+//  loop odd number
+
+for (var i = 1; i<=30; i = i+2 ){
+   document.write(i +"<br>");
+}
+
+// loop even number
+
+for (var i = 2; i<=30; i = i+2 ){
+   document.write(i + "<br>");
+}
+
+
+// loop if condition
+
+for (var i = 1; i<=30; i = i+1 ){
+   if(i&5==0){
+   document.write(i);
+
+}
+  }
+
+
+
+
+
+
+</script>
+</body>
+</html>
